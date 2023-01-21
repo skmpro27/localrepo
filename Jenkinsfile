@@ -1,5 +1,12 @@
 pipeline {
   agent any
+  parameters {
+    choice(
+      name: 'choice',
+      choices: ['main.py', 'app.py', 'tests.py'],
+      description: 'Passing the Environment'
+    )
+  }
   stages {
     stage('version') {
       steps {
