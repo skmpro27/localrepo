@@ -2,7 +2,7 @@ pipeline {
   agent any
   parameters {
     choice(
-      name: 'Cho',
+      name: 'Env',
       choices: ['main.py', 'app.py', 'tests.py'],
       description: 'Passing the Environment'
     )
