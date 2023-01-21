@@ -2,7 +2,7 @@ pipeline {
   agent any
   parameters {
     choice(
-      name: 'choice',
+      name: 'Cho',
       choices: ['main.py', 'app.py', 'tests.py'],
       description: 'Passing the Environment'
     )
@@ -15,7 +15,7 @@ pipeline {
     }
     stage('hello') {
       steps {
-        sh 'python3 tests.py'
+        sh 'python3 ${params.Cho}'
       }
     }
   }
