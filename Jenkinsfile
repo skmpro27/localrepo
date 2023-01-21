@@ -15,7 +15,7 @@ pipeline {
     }
     stage('hello') {
       steps {
-        sh 'python3 ${params.Cho}'
+        sh "python3 ${params.Env}"
       }
     }
   }
